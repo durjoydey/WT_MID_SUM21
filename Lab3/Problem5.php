@@ -14,8 +14,8 @@
     $imageWidth="80px";
     $imageHeight="80px"
     ?>
-    <img src="logo.jpg" width="<?php echo $imageWidth?>" height="<?php echo $imageHeight ?>"/>; 
-    <h2 align="left">American International University -<span style ="background-color:<?php echo $backgolor?>; color:<?php echo $fontcolor?>">Bangladesh </h2>
+    <img src="logo.jpg" width="<?php echo $imageWidth?>" height="<?php echo $imageHeight ?>"; align="left"/>
+    <h2>American International University -<span style ="background-color:<?php echo $backgolor?>; color:<?php echo $fontcolor?>">Bangladesh </h2>
 </span>
 
 </body>
