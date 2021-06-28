@@ -52,13 +52,11 @@
 			$err_name="Name Required";
 		}
 		
-		
 		else
         {
 			$name = $_POST["name"];
 		} 
-        
-       
+
 		if(!isset($_POST["gender"])){ //gender
 			$hasError = true;
 			$err_gender="Gender Required";
