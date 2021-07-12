@@ -25,7 +25,6 @@
 	$hasError=false;
 	
 	$array= array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-    //$array1= array("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31");
     $array2= array("January","February","March","April","May","June","July","August","September","October","November","December");
     $array3= array("10:00am-12:00pm","12:00pm-2:00pm","2:00pm-4:00pm","4:00pm-6:00pm");
     $array4= array("Dhaka Medical College Hospital","Kurmitola General Hospital","Mugda General Hospital","Shahid Suhrawardy Medical College","Salimullah Medical College Hospital");
@@ -112,10 +111,11 @@
 			$hasError = true;
 			$err_number = "Number should be numeric"; 
 		}
+		
 		else{
 			$number = htmlspecialchars($_POST["number"]);
 		}
-        if(empty($_POST["code"])){  //phone
+        if(empty($_POST["code"])){  //phonecode
 			$hasError = true;
 			$err_code = "Code Number Required";
 		}
@@ -124,6 +124,7 @@
 			$hasError = true;
 			$err_code = "Code Number should be numeric"; 
 		}
+		
 		else{
 			$code = htmlspecialchars($_POST["code"]);
 		}

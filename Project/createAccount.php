@@ -104,16 +104,13 @@
 			$hasError = true;
 			$err_email = "Email Required";
 		}
-		else if(!strpos($_POST["email"],"@") ) //@
+		else if(!strpos($_POST["email"],"@") )//@
 		{
 			$hasError = true;
 			$err_email="Email should contain @";
 		}
-		else if(!strpos($_POST["email"],".")) //.
-		{
-			$hasError = true;
-			$err_email="Email should contain .";
-		}
+
+		
 		else{
 			$email = htmlspecialchars($_POST["email"]);
 		}
@@ -138,6 +135,7 @@
 			$hasError = true;
 			$err_number = "Number should be numeric"; 
 		}
+		
 		else{
 			$number = htmlspecialchars($_POST["number"]);
 		}
@@ -153,7 +151,7 @@
 			$hasError = true;
 			$err_password="Password must contain at least 8 character";
 		} 
-		else if(!strpos($_POST["password"],"#") and !strpos($_POST["password"],"?"))
+		else if(!strpos($_POST["password"],"#") or !strpos($_POST["password"],"?"))
 		{
 			$hasError = true;
 			$err_password="Password should contain # or ?";
@@ -203,9 +201,7 @@
 			echo $_POST["birthmonth"]."<br>";
 			echo $_POST["birthyear"]."<br>";
 			$arr=$_POST["agree"];
-			foreach($arr as $e){
-				echo "$e<br>";
-			}
+			
 		}
 		
 	
